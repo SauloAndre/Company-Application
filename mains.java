@@ -46,7 +46,7 @@ public class mains {
           }
 
           public static void build(){
-            
+            System.out.printl("");
           }
 
         }
