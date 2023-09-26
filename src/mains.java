@@ -1,3 +1,4 @@
+package src;
 import java.util.Scanner;
 
 public class mains {
@@ -37,7 +38,7 @@ public class mains {
 
           if(login.equalsIgnoreCase(loginC) && password == passwordC){
             System.out.println("Welcome, " + loginC + "!");
-            build();
+            normal();
             }
           else{
             System.out.println("Try again other time...");
@@ -45,8 +46,57 @@ public class mains {
           }
           }
 
+          public static void normal(){
+            System.out.println("User: Root;");
+            System.out.println("Master: Admin;");
+            System.out.println("CEO?");
+            System.out.println("------- Y&$");
+            build();
+          }
+
           public static void build(){
-            System.out.printl("");
+            System.out.println("[------------------------------------------------]");
+		System.out.println("[-------- WELCOME TO THE CENTRAL COMPANY --------]");
+		System.out.println("[-*** CHOOSE THE OPTION FOR THE APPLICATIONS ***-]");
+		System.out.println("[------------------------------------------------]");
+		System.out.println("[------[   OPTION 1 - LATAM    ]--------]");
+		System.out.println("[------[   OPTION 2 - GOL      ]--------]");
+		System.out.println("[------[   OPTION 3 - AZUL     ]--------]");
+
+    int operation = scan.nextInt();
+		
+		switch(operation) {
+		case 1:
+			LATAM();
+			break;
+		case 2:
+			GOL();
+			break;
+		case 3:
+			AZUL();
+			break;
+		case 4:
+			System.out.println("Good bye, thanks.");
+			System.exit(0);
+      break;
+		default:
+			System.out.println("Option wrong.");
+			build();
+			break;
           }
 
         }
+
+        public static void LATAM(){
+
+        }
+
+        public static void GOL(){
+          
+        }
+
+        public static void AZUL(){
+          
+        }
+        
+      }
