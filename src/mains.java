@@ -1,8 +1,11 @@
 package src;
+import java.util.Random;
 import java.util.Scanner;
 
 public class mains {
     static Scanner scan = new Scanner(System.in);
+    static Random random = new Random();
+    static Company comp = new Company();
 
     public static void main(String[] args) {
 			interactionCeo();
@@ -21,7 +24,7 @@ public class mains {
           }
           else{
             System.out.println("Try again other time...");
-            interactionCeo();
+             interactionCeo();
           }
         }
 
@@ -29,6 +32,7 @@ public class mains {
           String loginC = "Saulo Andre";
           int passwordC = 321;
 
+          System.out.println("||||||||||||||||||||||");
           System.out.println("--- We go verify... --");
           System.out.println("---- Login page -----");
           System.out.println("------ Login: -------");
@@ -47,6 +51,7 @@ public class mains {
           }
 
           public static void normal(){
+            System.out.println("|||||||||||");
             System.out.println("User: Root;");
             System.out.println("Master: Admin;");
             System.out.println("CEO?");
@@ -55,48 +60,32 @@ public class mains {
           }
 
           public static void build(){
-            System.out.println("[------------------------------------------------]");
+    System.out.println("[------------------------------------------------]");
 		System.out.println("[-------- WELCOME TO THE CENTRAL COMPANY --------]");
 		System.out.println("[-*** CHOOSE THE OPTION FOR THE APPLICATIONS ***-]");
 		System.out.println("[------------------------------------------------]");
-		System.out.println("[------[   OPTION 1 - LATAM    ]--------]");
-		System.out.println("[------[   OPTION 2 - GOL      ]--------]");
-		System.out.println("[------[   OPTION 3 - AZUL     ]--------]");
+		System.out.println("    [------[   FIRST - LATAM    ]--------]");
+		System.out.println("    [------[   SECOND - GOL     ]--------]");
+		System.out.println("    [------[   THIRD - AZUL     ]--------]");
 
-    int operation = scan.nextInt();
-		
-		switch(operation) {
-		case 1:
-			LATAM();
-			break;
-		case 2:
-			GOL();
-			break;
-		case 3:
-			AZUL();
-			break;
-		case 4:
-			System.out.println("Good bye, thanks.");
-			System.exit(0);
-      break;
-		default:
-			System.out.println("Option wrong.");
-			build();
-			break;
+    System.out.println("write 'I'm not a Robot':");
+    String res = scan.nextLine();
+
+    if(res.equalsIgnoreCase("I'm not a Robot")){
+      comp.company();
+    }
+    else{
+      normal();   
+    }
           }
+        
+        public static void Finally(){
 
-        }
+          System.out.println("|||||||||||||||||||||||||||||||");
+          System.out.println("| company | hour | value | id |");
+          System.out.println("|  " + comp.companyL + "  | " +  comp.hourL1 + "| " + comp.valueL1 + " |" + comp.idL1 + "|");
+          System.out.println("|  " + comp.companyL + "  | " + comp.hourL2 + "| " + comp.valueL2 + " |" + comp.idL2 + "|");
 
-        public static void LATAM(){
-
-        }
-
-        public static void GOL(){
-          
-        }
-
-        public static void AZUL(){
-          
         }
         
       }
